@@ -18,7 +18,7 @@ export function Header() {
   const isHomeActive = pathname === '/'
   const isProductOn = pathname.includes('produtos')
 
-  const { logout } = useUser()
+  const { logout, userData } = useUser()
 
   const logoutUser = () => {
     logout()
@@ -79,7 +79,7 @@ export function Header() {
               textDecoration: 'none'
             }}
           >
-            <p style={{ padding: 5 }}> Olá, Eduardo </p> Sair
+            <p style={{ padding: 5 }}> Olá, {userData.name} </p> Sair
           </Link>
         </ContainerText>
       </ContainerRight>

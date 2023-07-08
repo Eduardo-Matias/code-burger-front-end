@@ -14,18 +14,17 @@ import {
 } from './styles'
 
 export function Product() {
+  const { state } = useLocation()
+
+  let categoryId = 0
+  if (state?.categoryId) {
+    categoryId = state.categoryId
+  }
+
   const [categories, setCategories] = useState([])
   const [products, setProducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
-  const [activeCategory, setActiveCategory] = useState(0)
-
-  const { state } = useLocation()
-
-  useEffect(() => {
-    if (state.categoryId) {
-      setActiveCategory(state.categoryId)
-    }
-  }, [state.categoryId])
+  const [activeCategory, setActiveCategory] = useState(categoryId)
 
   useEffect(() => {
     async function loadCategory() {

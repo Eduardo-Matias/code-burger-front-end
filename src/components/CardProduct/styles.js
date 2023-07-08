@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -36,4 +38,30 @@ export const ProductPrice = styled.p`
   color: #000000;
   line-height: 21px;
   margin-top: 30px;
+`
+
+export const Button = styled(Link)`
+  width: 182px;
+  height: 38px;
+  background: #9758a6;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  line-height: 19px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 `
