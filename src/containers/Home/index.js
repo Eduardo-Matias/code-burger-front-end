@@ -7,7 +7,7 @@ import { HomeImage } from './styles'
 export function Home() {
   return (
     <div>
-      <HomeImage src={HomeLogo} alt="home logo" />
+      <HomeImage src={HomeLogo} alt="home logo image" />
       <CategoryCarousel />
       <OffersCarousel />
     </div>
